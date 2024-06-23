@@ -12,10 +12,10 @@ import software.amazon.awssdk.services.s3.S3Client;
 public class AWSConfig {
 	
 	
-	private String accessKey ="AKIAX5XSI5UT4M674AFL";
+	private String accessKey ="";
 	
 	
-	private String accessSecretKey ="SEUYFy4LLDLvDG184lP2qM+PE/NFmi5MUCH3Wf7I";
+	private String accessSecretKey ="";
 	
 	
 	private String region = "ap-south-1";
@@ -25,7 +25,7 @@ public class AWSConfig {
 	
 	@Bean
     public S3Client s3Client() {
-        AwsBasicCredentials awsCreds = AwsBasicCredentials.create("AKIAX5XSI5UT4M674AFL", "SEUYFy4LLDLvDG184lP2qM+PE/NFmi5MUCH3Wf7I");
+        AwsBasicCredentials awsCreds = AwsBasicCredentials.create("", "");
         return S3Client.builder()
                 .region(Region.AP_SOUTH_1)  
                 .credentialsProvider(StaticCredentialsProvider.create(awsCreds))
@@ -34,7 +34,7 @@ public class AWSConfig {
 
     @Bean
     public Ec2Client ec2Client() {
-        AwsBasicCredentials awsCreds = AwsBasicCredentials.create("AKIAX5XSI5UT4M674AFL", "SEUYFy4LLDLvDG184lP2qM+PE/NFmi5MUCH3Wf7I");
+        AwsBasicCredentials awsCreds = AwsBasicCredentials.create("", "");
         return Ec2Client.builder()
                 .region(Region.AP_SOUTH_1)  
                 .credentialsProvider(StaticCredentialsProvider.create(awsCreds))
