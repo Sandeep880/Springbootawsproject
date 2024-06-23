@@ -17,8 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
-//import com.amazonaws.services.ec2.AmazonEC2;
-//import com.amazonaws.services.s3.AmazonS3;
+
 
 import software.amazon.awssdk.services.ec2.Ec2Client;
 import software.amazon.awssdk.services.ec2.model.DescribeInstancesRequest;
@@ -71,7 +70,7 @@ public class AwsService {
             ec2Instance.setInstanceId(instance.instanceId());
             System.out.println(instance);
             ec2Instance.setInstanceType(instance.instanceType().toString());
-            // Set other fields
+            
             ec2InstanceRepository.save(ec2Instance);
             
             }
