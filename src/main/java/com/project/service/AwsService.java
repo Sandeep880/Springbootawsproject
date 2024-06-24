@@ -95,7 +95,7 @@ public class AwsService {
             S3Bucket s3Bucket = new S3Bucket();
             System.out.println(bucket);
             s3Bucket.setBucketName(bucket.name());
-            // Set other fields
+            
             s3BucketRepository.save(s3Bucket);
         }
         updateJobStatus(jobId, "Success");
