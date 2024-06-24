@@ -15,7 +15,7 @@ import com.project.entity.JobStatus;
 import com.project.repo.JobStatusRepository;
 import com.project.entity.JobStatus;
 import com.project.service.AwsService;
-import com.project.service.JobService;
+
 
 @RestController
 @RequestMapping("/api")
