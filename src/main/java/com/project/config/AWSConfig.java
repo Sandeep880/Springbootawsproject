@@ -11,7 +11,7 @@ import software.amazon.awssdk.services.s3.S3Client;
 @Configuration
 public class AWSConfig {
 	
-	
+	//we removed access key and accessSecretKey for security purpose
 	private String accessKey ="";
 	
 	
